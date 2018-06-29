@@ -1,0 +1,12 @@
+{
+  "name": "wait-for",
+  "version": "1.0.0",
+  "description": "wait for a condition functionr return true, then do something",
+  "main": "src/wait-for.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "jzykc@hotmail.com",
+  "license": "ISC"
+}
