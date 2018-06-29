@@ -1,16 +1,3 @@
-// 模拟异步加载
-setTimeout(() => {
-  global.gtag = function(...args) {console.log(...args)}
-  console.log(gtag)
-}, 2000);
-
-function test(){
-  console.log('excute')
-}
-
-waitFor(() => typeof global.gtag === 'function').then(res => {
-  test()
-})
 
 /**
  * 等待某一条件成立时执行
@@ -18,7 +5,7 @@ waitFor(() => typeof global.gtag === 'function').then(res => {
  * @param {Number} maxTime max wait time, default to 5000ms
  * @param {Boolean} verbose should print some information during execution
  */
-function waitFor(condition, maxTime = 5000, verbose = false ) {
+module.exports = function waitFor(condition, maxTime = 5000, verbose = false ) {
   let timer = null
   const start = +(new Date())
 
